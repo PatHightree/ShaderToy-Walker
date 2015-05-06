@@ -1,4 +1,4 @@
-Shader "ShaderToy/Simple test"
+Shader "ShaderToy walker/Simple test"
 {    
     Properties
     {
