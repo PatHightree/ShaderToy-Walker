@@ -13,12 +13,12 @@ public class CG_test : MonoBehaviour {
 	// Called by the camera to apply the image effect
 	void OnRenderImage (RenderTexture source, RenderTexture destination) {
 		material.SetTexture ("_MainTex", testTexture);
-//		material.SetVector("iViewportOffset", ViewportOffset);
-//		material.SetVector("iViewportScale", ViewportScale);
-//		material.SetVector("iCamPos", transform.position);
-//		material.SetVector("iCamRight", transform.right);
-//		material.SetVector("iCamUp", transform.up);
-//		material.SetVector("iCamForward", transform.forward);
+		material.SetVector("iViewportOffset", ViewportOffset);
+		material.SetVector("iViewportScale", ViewportScale);
+		material.SetVector("iCamPos", transform.position);
+		material.SetVector("iCamRight", transform.right);
+		material.SetVector("iCamUp", transform.up);
+		material.SetVector("iCamForward", transform.forward);
 		Graphics.Blit (source, destination, material);
 	}
 }

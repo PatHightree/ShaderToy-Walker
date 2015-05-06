@@ -1,0 +1,4 @@
+﻿Text replacements:
+vec		float
+fract	frac
+mix		lerp

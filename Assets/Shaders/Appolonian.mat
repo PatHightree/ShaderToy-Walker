@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Appolonian
-  m_Shader: {fileID: 4800000, guid: d039f7ee4c43a7c44a0b2f5154a94f7e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 57c000982f722524dbd5afe1e7e51bb4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
