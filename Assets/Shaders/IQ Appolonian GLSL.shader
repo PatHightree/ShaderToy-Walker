@@ -9,7 +9,7 @@
 // Unity note: This shader only works when Unity is running in OpenGL!
 // To do this, start the editor with -force-opengl on the command line.
  
-Shader "ShaderToy walker/IQ Appolonian"
+Shader "ShaderToy walker/IQ Appolonian GLSL"
 {    
     Properties
     {

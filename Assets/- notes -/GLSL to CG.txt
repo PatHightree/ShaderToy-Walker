@@ -2,3 +2,9 @@
 vec		float
 fract	frac
 mix		lerp
+
+GLSL suppies screen coordinates [0, resolution]
+	p = iViewportOffset + iViewportScale * gl_FragCoord.xy / _ScreenParams.xy;
+    p.x *= _ScreenParams.x/_ScreenParams.y;
+CG supplies UVs [0,1]
+	p = iViewportOffset + iViewportScale * IN.uv;
