@@ -122,8 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 62967ca3469b60b4bae9246764e7862e, type: 2}
   OutputRT: {fileID: 8400000, guid: 242654484709db0449eae6b5b8948af0, type: 2}
-  ViewportOffset: {x: -1, y: -1}
-  ViewportScale: {x: 2, y: 2}
+  WorldScale: .25
 --- !u!81 &199861239
 AudioListener:
   m_ObjectHideFlags: 0
@@ -184,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 199861237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: .5}
+  m_LocalPosition: {x: 4, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
