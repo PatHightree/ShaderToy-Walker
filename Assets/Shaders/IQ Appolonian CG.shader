@@ -23,8 +23,6 @@ Shader "ShaderToy walker/IQ Appolonian CG" {
 			#include "UnityCG.cginc"
 
 			//sampler2D _MainTex;
-			uniform float2 iViewportOffset;
-			uniform float2 iViewportScale;
             uniform float3 iCamRight;
             uniform float3 iCamUp;
             uniform float3 iCamForward;
@@ -39,7 +37,10 @@ Shader "ShaderToy walker/IQ Appolonian CG" {
 			{
 				v2f o;
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.uv =  v.texcoord.xy;
+				// [0,1] to [-1,1]
+				o.uv =  float2(-1,-1) + float2(2, 2) * v.texcoord.xy;
+				// 16:10 viewport aspect ratio
+				o.uv *= float2(1.6, 1.0);
 				return o;
 			}
 	
@@ -96,7 +97,7 @@ Shader "ShaderToy walker/IQ Appolonian CG" {
 
 			fixed4 frag(v2f IN) : SV_Target {
 				float2 p;
-				p = iViewportOffset + iViewportScale * IN.uv;
+				p = IN.uv;
 
 				//ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*_Time.y) );
 			    ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*0) );
