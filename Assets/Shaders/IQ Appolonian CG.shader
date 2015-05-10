@@ -27,6 +27,7 @@ Shader "ShaderToy walker/IQ Appolonian CG" {
             uniform float3 iCamUp;
             uniform float3 iCamForward;
             uniform float3 iCamPos;
+            uniform float iFracAnim;
 
 			struct v2f {
 				float4 pos : POSITION;
@@ -99,8 +100,8 @@ Shader "ShaderToy walker/IQ Appolonian CG" {
 				float2 p;
 				p = IN.uv;
 
-				//ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*_Time.y) );
-			    ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*0) );
+				ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*iFracAnim) );
+			    //ss = 1.1 + 0.5*smoothstep( -0.3, 0.3, cos(0.1*0) );
 				
 				// camera navigation
 				float3 ro = iCamPos;

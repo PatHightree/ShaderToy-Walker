@@ -123,6 +123,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 62967ca3469b60b4bae9246764e7862e, type: 2}
   OutputRT: {fileID: 8400000, guid: 242654484709db0449eae6b5b8948af0, type: 2}
   WorldScale: .25
+  FractalAnim: 20
 --- !u!81 &199861239
 AudioListener:
   m_ObjectHideFlags: 0
