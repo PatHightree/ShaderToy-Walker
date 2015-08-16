@@ -1,7 +1,18 @@
 ﻿Text replacements:
-vec		float
-fract	frac
-mix		lerp
+vec				float
+fract			frac
+mix				lerp
+mat3			float3x3
+iGlobalTime		_Time[1]
+mod(			fmod(
+
+Swap order of vector-matrix multiplications
+v=v*m -> v=mul(v,m)
+
+Constructor parameter count
+vec3(0) -> float3(0,0,0)
+
+Transpose matrices
 
 GLSL suppies screen coordinates [0, resolution]
 	p = iViewportOffset + iViewportScale * gl_FragCoord.xy / _ScreenParams.xy;
